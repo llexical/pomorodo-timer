@@ -1,0 +1,238 @@
+:root {
+  --color-one: #8cd790;
+  --color-two: #00e8fc;
+  --color-three: #f96e46;
+  --color-four: #426a5a;
+  --color-five: #ffe3e3;
+  --color-black: #000;
+  --color-white: #fff;
+
+  --state-inactive-color: var(--color-three);
+  --state-active-color: var(--color-four);
+  --state-paused-color: var(--color-three);
+  --state-completed-color: var(--color-one);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+a {
+  margin-right: 1rem;
+}
+
+main {
+  --state-color: var(--state-inactive-color);
+
+  &[data-state="active"] {
+    --state-color: var(--state-active-color);
+  }
+
+  &[data-state="paused"] {
+    --state-color: var(--state-paused-color);
+  }
+
+  &[data-state="completed"] {
+    --state-color: var(--state-completed-color);
+  }
+
+  text-align: center;
+  padding: 1em;
+  margin: 0 auto;
+  width: 540px;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 4rem auto 2.5rem;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  line-height: 1.1;
+  font-weight: 300;
+  margin-top: 0;
+}
+
+button {
+  background-color: white;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+textarea, input {
+  border: 0;
+  background-color: transparent;
+  color: inherit;
+  outline:none;
+  font: inherit;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+  sans-serif;
+}
+
+.Timer {
+  --timer-background: var(--state-color);
+  --timer-color: var(--color-white);
+
+  background-color: var(--timer-background);
+  color: var(--timer-color);
+  padding: 20px;
+  border-radius: 10px;
+
+  > button {
+    background-color: var(--timer-color);
+    color: var(--timer-background);
+    margin: 0 10px;
+    padding: 10px;
+    border-radius: 3px;
+    font-weight: 400;
+  }
+
+  > form {
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 1.1;
+    margin: 4rem auto 2.5rem;
+  }
+
+  > form > input {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 1.1;
+    height: 1lh;
+    width: 2ch;
+    border-bottom: 2px solid var(--timer-background);
+    padding:0;
+  }
+
+  > form > input:focus-visible {
+    border-bottom: 2px solid var(--timer-color);
+    outline: none;
+  }
+
+  > h1 {
+    border-bottom: 2px solid var(--timer-background);
+  }
+}
+
+.Prizes {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 120px 1fr;
+  position: relative;
+  justify-items: center;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: var(--color-five);
+  border-radius: 10px;
+  color: var(--color-three);
+
+  > img {
+    max-width: 100%;
+  }
+}
+
+.Prizes-next {
+  width: 100%;
+  text-align: left;
+
+  > h2 {
+    background-color: white;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+
+  > textarea {
+    display: block;
+    border: 0;
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: inherit;
+    resize: none;
+  }
+
+  > textarea:focus-visible {
+    border-bottom: 2px solid var(--color-three);
+    outline: none;
+  }
+}
+
+.Stickers {
+  padding: 20px;
+  background-color: var(--color-one);
+  margin-top: 20px;
+  border-radius: 10px;
+
+  > ul {
+    display: grid;
+    grid-template-columns: repeat(6, 70px);
+    padding: 0;
+    grid-gap: 10px;
+    justify-content: center;
+    margin: 0;
+  }
+
+  > ul > li {
+    list-style: none;
+    height: 70px;
+    border: 5px solid var(--color-four);
+    border-radius: 40px;
+    line-height: 60px;
+    font-weight: 500;
+    font-size: 25px;
+    color: var(--color-four);
+    position: relative;
+  }
+
+  > ul > li[data-next-sticker="true"] {
+    background-color: var(--state-color);
+    border-color: var(--color-white);
+    color: var(--color-white);
+  }
+
+  > ul > li[data-is-completed="true"] {
+    border-color: var(--color-white);
+    color: var(--color-one);
+  }
+
+  button {
+    width: 100%;
+    height: 100%;
+  }
+
+  button:disabled {
+    pointer-events: none;
+  }
+
+  img {
+    width: 150%;
+    position: absolute;
+    left: -25%;
+    top: -25%;
+  }
+}
