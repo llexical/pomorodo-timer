@@ -191,7 +191,7 @@ textarea, input {
     margin-top: var(--space-sm);
     color: inherit;
     resize: none;
-    wdith: 100%;
+    width: 100%;
   }
 
   > textarea:focus-visible {

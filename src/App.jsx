@@ -1,4 +1,4 @@
-import { createSignal, Show, For, createMemo } from "solid-js";
+import { createSignal, Show, Index, createMemo, onCleanup } from "solid-js";
 import { createStore } from "solid-js/store";
 
 const audioURL =
@@ -123,6 +123,11 @@ export function App() {
     );
   }
 
+  onCleanup(() => {
+    clearInterval(curCountdown);
+    clearTimeout(curAudioTimeout);
+  });
+
 
   return (
     <main data-state={state()}>
@@ -160,24 +165,24 @@ export function App() {
       </section>
       <section class="Stickers">
         <ul>
-          <For each={stickers}>
+          <Index each={stickers}>
             {(sticker, index) => {
-              const isNextSticker = () => index() === nextStickerIndex();
+              const isNextSticker = () => index === nextStickerIndex();
               return (
                 <li data-next-sticker={isNextSticker()} data-is-completed={sticker.completed}>
                   <button
                     disabled={!isNextSticker() || state() !== "completed"}
                     onClick={() => onOpenPrize()}
                   >
-                    {index() + 1}
-                    <Show when={sticker.sticker}>
-                      <img src={sticker.sticker} />
+                    {index + 1}
+                    <Show when={sticker().sticker}>
+                      <img src={sticker().sticker} />
                     </Show>
                   </button>
                 </li>
               );
             }}
-          </For>
+          </Index>
         </ul>
       </section>
     </main>
