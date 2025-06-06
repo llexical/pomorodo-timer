@@ -11,6 +11,26 @@
   --state-active-color: var(--color-four);
   --state-paused-color: var(--color-three);
   --state-completed-color: var(--color-one);
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-xxl: 64px;
+
+  --font-xs: 12px;
+  --font-sm: 16px; 
+  --font-md: 24px;
+  --font-lg: 32px;
+  --font-xl: 64px;
+
+  --font-weight-normal: 300;
+  --font-weight-bold: 400;
+  --font-weight-super: 500;
+
+  --curve-sm: 4px;
+  --curve-md: 8px;
 }
 
 *,
@@ -22,10 +42,6 @@
 body {
   font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
-}
-
-a {
-  margin-right: 1rem;
 }
 
 main {
@@ -44,24 +60,25 @@ main {
   }
 
   text-align: center;
-  padding: 1em;
+  padding: var(--space-md);
   margin: 0 auto;
-  width: 540px;
+  width: 100%;
+  max-width: 544px;
 }
 
 h1 {
   text-transform: uppercase;
-  font-size: 4rem;
-  font-weight: 400;
+  font-size: var(--font-xl);
+  font-weight: var(--font-weight-bold);
   line-height: 1.1;
-  margin: 4rem auto 2.5rem;
+  margin: var(--space-xxl) auto var(--space-xl);
 }
 
 h2 {
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: var(--font-sm);
   line-height: 1.1;
-  font-weight: 300;
+  font-weight: var(--font-weight-normal);
   margin-top: 0;
 }
 
@@ -92,31 +109,31 @@ textarea, input {
 
   background-color: var(--timer-background);
   color: var(--timer-color);
-  padding: 20px;
-  border-radius: 10px;
+  padding: var(--space-lg);
+  border-radius: var(--curve-md);
 
   > button {
     background-color: var(--timer-color);
     color: var(--timer-background);
-    margin: 0 10px;
-    padding: 10px;
-    border-radius: 3px;
-    font-weight: 400;
+    margin: 0 var(--space-sm);
+    padding: var(--space-sm);
+    border-radius: var(--curve-sm);
+    font-weight: var(--font-weight-bold);
   }
 
   > form {
     text-transform: uppercase;
-    font-size: 4rem;
-    font-weight: 400;
+    font-size: var(--font-xl);
+    font-weight: var(--font-weight-bold);
     line-height: 1.1;
-    margin: 4rem auto 2.5rem;
+    margin: var(--space-xxl) auto var(--space-xl);
   }
 
   > form > input {
     display: inline-block;
     text-transform: uppercase;
-    font-size: 4rem;
-    font-weight: 400;
+    font-size: var(--font-xl);
+    font-weight: var(--font-weight-bold);
     line-height: 1.1;
     height: 1lh;
     width: 2ch;
@@ -140,10 +157,10 @@ textarea, input {
   grid-template-columns: 120px 1fr;
   position: relative;
   justify-items: center;
-  margin-top: 20px;
-  padding: 20px;
+  margin-top: var(--space-md);
+  padding: var(--space-md);
   background-color: var(--color-five);
-  border-radius: 10px;
+  border-radius: var(--curve-md);
   color: var(--color-three);
 
   > img {
@@ -158,10 +175,10 @@ textarea, input {
   > h2 {
     background-color: white;
     display: inline-block;
-    padding: 5px;
-    border-radius: 10px;
-    font-size: 0.8rem;
-    font-weight: 400;
+    padding: var(--space-xs);
+    border-radius: var(--curve-sm);
+    font-size: var(--font-xs);
+    font-weight: var(--font-weight-bold);
     margin-bottom: 0;
   }
 
@@ -169,11 +186,12 @@ textarea, input {
     display: block;
     border: 0;
     background-color: transparent;
-    font-weight: 500;
-    font-size: 1.5rem;
-    margin-top: 10px;
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-md);
+    margin-top: var(--space-sm);
     color: inherit;
     resize: none;
+    wdith: 100%;
   }
 
   > textarea:focus-visible {
@@ -183,16 +201,16 @@ textarea, input {
 }
 
 .Stickers {
-  padding: 20px;
+  padding: var(--space-lg);
   background-color: var(--color-one);
-  margin-top: 20px;
-  border-radius: 10px;
+  margin-top: var(--space-lg);
+  border-radius: var(--curve-md);
 
   > ul {
     display: grid;
-    grid-template-columns: repeat(6, 70px);
+    grid-template-columns: repeat(auto-fill, 70px);
     padding: 0;
-    grid-gap: 10px;
+    grid-gap: 8px;
     justify-content: center;
     margin: 0;
   }
@@ -203,8 +221,8 @@ textarea, input {
     border: 5px solid var(--color-four);
     border-radius: 40px;
     line-height: 60px;
-    font-weight: 500;
-    font-size: 25px;
+    font-weight: var(--font-weight-super);
+    font-size: var(--font-lg);
     color: var(--color-four);
     position: relative;
   }
