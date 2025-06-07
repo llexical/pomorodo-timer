@@ -103,55 +103,6 @@ textarea, input {
   sans-serif;
 }
 
-.Prizes {
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: 120px 1fr;
-  position: relative;
-  justify-items: center;
-  margin-top: var(--space-md);
-  padding: var(--space-md);
-  background-color: var(--color-five);
-  border-radius: var(--curve-md);
-  color: var(--color-three);
-
-  > img {
-    max-width: 100%;
-  }
-}
-
-.Prizes-next {
-  width: 100%;
-  text-align: left;
-
-  > h2 {
-    background-color: white;
-    display: inline-block;
-    padding: var(--space-xs);
-    border-radius: var(--curve-sm);
-    font-size: var(--font-xs);
-    font-weight: var(--font-weight-bold);
-    margin-bottom: 0;
-  }
-
-  > textarea {
-    display: block;
-    border: 0;
-    background-color: transparent;
-    font-weight: var(--font-weight-bold);
-    font-size: var(--font-md);
-    margin-top: var(--space-sm);
-    color: inherit;
-    resize: none;
-    width: 100%;
-  }
-
-  > textarea:focus-visible {
-    border-bottom: 2px solid var(--color-three);
-    outline: none;
-  }
-}
-
 .Stickers {
   padding: var(--space-lg);
   background-color: var(--color-one);

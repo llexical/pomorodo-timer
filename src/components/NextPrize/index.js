@@ -1,0 +1,1 @@
+export { NextPrize } from './NextPrize';

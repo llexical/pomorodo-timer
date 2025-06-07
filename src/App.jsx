@@ -1,12 +1,9 @@
-import { createSignal, Show, Index, createMemo, onCleanup } from "solid-js";
+import { Show, Index, createMemo } from "solid-js";
 import { createStore } from "solid-js/store";
 
 import { useCountdown } from "./context/Countdown";
 import { Timer } from './components/Timer'
-
-const imgPrizeUrl = "https://cdn-icons-png.flaticon.com/512/9036/9036098.png";
-const imgPrizeUrlCompleted =
-  "https://cdn-icons-png.flaticon.com/512/6039/6039671.png";
+import { NextPrize } from "./components/NextPrize";
 
 const stickerOptions = [
   "https://cdn-icons-png.flaticon.com/512/6443/6443652.png",
@@ -48,18 +45,7 @@ export function App() {
     return stickerOptions[i];
   }
 
-  function getNextPrize() {
-    const storedPrize = localStorage.getItem("nextPrize")
-    return storedPrize ? storedPrize : "";
-  }
-
-  function updateNextPrize(nextPrize) {
-    setNextPrize(nextPrize);
-    localStorage.setItem("nextPrize", nextPrize)
-  }
-
   const [stickers, setStickers] = createStore(getStickers());
-  const [nextPrize, setNextPrize] = createSignal(getNextPrize());
 
   const nextStickerIndex = createMemo(() => {
     return stickers.findIndex((sticker) => !sticker.completed)
@@ -77,15 +63,7 @@ export function App() {
   return (
     <main data-state={state()}>
       <Timer />
-      <section class="Prizes">
-        <img
-          src={state() === "completed" ? imgPrizeUrlCompleted : imgPrizeUrl}
-        />
-        <div class="Prizes-next">
-          <h2>Next prize</h2>
-          <textarea name="prize-text" value={nextPrize()} placeholder="Something awesome here!" onFocusOut={(e) => updateNextPrize(e.target.value)}/>
-        </div>
-      </section>
+      <NextPrize />
 
       <section class="Stickers">
         <ul>
