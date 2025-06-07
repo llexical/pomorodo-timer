@@ -44,28 +44,6 @@ body {
     sans-serif;
 }
 
-main {
-  --state-color: var(--state-inactive-color);
-
-  &[data-state="active"] {
-    --state-color: var(--state-active-color);
-  }
-
-  &[data-state="paused"] {
-    --state-color: var(--state-paused-color);
-  }
-
-  &[data-state="completed"] {
-    --state-color: var(--state-completed-color);
-  }
-
-  text-align: center;
-  padding: var(--space-md);
-  margin: 0 auto;
-  width: 100%;
-  max-width: 544px;
-}
-
 h1 {
   text-transform: uppercase;
   font-size: var(--font-xl);
