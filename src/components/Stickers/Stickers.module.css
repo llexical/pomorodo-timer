@@ -1,0 +1,54 @@
+.Stickers {
+  padding: var(--space-lg);
+  background-color: var(--color-one);
+  margin-top: var(--space-lg);
+  border-radius: var(--curve-md);
+
+  > ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 70px);
+    padding: 0;
+    grid-gap: 8px;
+    justify-content: center;
+    margin: 0;
+  }
+
+  > ul > li {
+    list-style: none;
+    height: 70px;
+    border: 5px solid var(--color-four);
+    border-radius: 40px;
+    line-height: 60px;
+    font-weight: var(--font-weight-super);
+    font-size: var(--font-lg);
+    color: var(--color-four);
+    position: relative;
+  }
+
+  > ul > li[data-next-sticker="true"] {
+    background-color: var(--state-color);
+    border-color: var(--color-white);
+    color: var(--color-white);
+  }
+
+  > ul > li[data-is-completed="true"] {
+    border-color: var(--color-white);
+    color: var(--color-one);
+  }
+
+  button {
+    width: 100%;
+    height: 100%;
+  }
+
+  button:disabled {
+    pointer-events: none;
+  }
+
+  img {
+    width: 150%;
+    position: absolute;
+    left: -25%;
+    top: -25%;
+  }
+}
