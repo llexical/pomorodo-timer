@@ -1,0 +1,47 @@
+.Timer {
+  --timer-background: var(--state-color);
+  --timer-color: var(--color-white);
+
+  background-color: var(--timer-background);
+  color: var(--timer-color);
+  padding: var(--space-lg);
+  border-radius: var(--curve-md);
+
+  > button {
+    background-color: var(--timer-color);
+    color: var(--timer-background);
+    margin: 0 var(--space-sm);
+    padding: var(--space-sm);
+    border-radius: var(--curve-sm);
+    font-weight: var(--font-weight-bold);
+  }
+
+  > form {
+    text-transform: uppercase;
+    font-size: var(--font-xl);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.1;
+    margin: var(--space-xxl) auto var(--space-xl);
+  }
+
+  > form > input {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: var(--font-xl);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.1;
+    height: 1lh;
+    width: 2ch;
+    border-bottom: 2px solid var(--timer-background);
+    padding:0;
+  }
+
+  > form > input:focus-visible {
+    border-bottom: 2px solid var(--timer-color);
+    outline: none;
+  }
+
+  > h1 {
+    border-bottom: 2px solid var(--timer-background);
+  }
+}
