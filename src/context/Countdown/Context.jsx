@@ -11,7 +11,7 @@ export function CountdownProvider(props) {
   const audio = new Audio(audioURL);
   const startTime = new Temporal.PlainTime(0, 0, 3);
   const oneSecondDuration = Temporal.Duration.from("PT1S"); // One-second duration
-  
+
   const [state, setState] = createSignal("inactive");
   const [countdownTime, setCountdownTime] = createSignal(startTime);
 
@@ -24,7 +24,7 @@ export function CountdownProvider(props) {
   }
 
   const startCountdown = () =>  {
-    if (["active"].includes(props.state)) return;
+    if (["active"].includes(state())) return;
     setState("active");
 
     curCountdown = setInterval(() => {

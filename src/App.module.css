@@ -1,4 +1,50 @@
 .App {
+  --theme-nature-color-one:rgb(209, 226, 131);
+  --theme-nature-color-two:rgb(141, 199, 140);
+  --theme-nature-color-three: rgb(97, 139, 123);
+  --theme-nature-color-four: rgb(58, 118, 92);
+  --theme-nature-color-five:rgb(204, 215, 156);
+  --theme-nature-color-black: #182711;
+  --theme-nature-color-white:rgb(229, 228, 215);
+
+  --theme-cats-color-one: rgb(251, 194, 181);
+  --theme-cats-color-two:rgb(255, 168, 169);
+  --theme-cats-color-three: rgb(247, 134, 170);
+  --theme-cats-color-four: rgb(161, 74, 118);
+  --theme-cats-color-five: rgb(97, 97, 233);
+  --theme-cats-color-black: #182711;
+  --theme-cats-color-white:rgb(235, 225, 234);
+
+  &[data-theme="nature"] {
+    --color-one: var(--theme-nature-color-one);
+    --color-two: var(--theme-nature-color-two);
+    --color-three: var(--theme-nature-color-three);
+    --color-four: var(--theme-nature-color-four);
+    --color-five: var(--theme-nature-color-five);
+    --color-white: var(--theme-nature-color-white);
+    --color-black: var(--theme-nature-color-black);
+
+    background-image: url("https://images.unsplash.com/photo-1506260408121-e353d10b87c7?q=80&w=2128&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-repeat: no-repeat;
+  }
+
+  &[data-theme="cats"] {
+    --color-one: var(--theme-cats-color-one);
+    --color-two: var(--theme-cats-color-two);
+    --color-three: var(--theme-cats-color-three);
+    --color-four: var(--theme-cats-color-four);
+    --color-five: var(--theme-cats-color-five);
+    --color-white: var(--theme-cats-color-white);
+    --color-black: var(--theme-cats-color-black);
+
+    background-image: url("https://img.freepik.com/free-photo/digital-art-cat-pattern_23-2151520532.jpg");
+  }
+
+  --state-inactive-color: var(--color-three);
+  --state-active-color: var(--color-four);
+  --state-paused-color: var(--color-three);
+  --state-completed-color: var(--color-two);
+
   --state-color: var(--state-inactive-color);
 
   &[data-state="active"] {
@@ -13,6 +59,15 @@
     --state-color: var(--state-completed-color);
   }
 
+  background-position: center;
+  background-color: var(--color-white);
+  height: calc(100vh - (var(--space-md) * 2) );
+  position: relative;
+  border-radius: var(--curve-md);
+  overflow: auto;
+}
+
+.App-content {
   text-align: center;
   padding: var(--space-md);
   margin: 0 auto;

@@ -2,19 +2,31 @@ import { Index, createMemo, Show } from "solid-js";
 import { createStore } from "solid-js/store";
 
 import { useCountdown } from "../../context/Countdown";
+import { useTheme } from "../../context/Theme";
 import styles from './Stickers.module.css'
 
-const stickerOptions = [
-  "https://cdn-icons-png.flaticon.com/512/6443/6443652.png",
-  "https://cdn-icons-png.flaticon.com/512/6443/6443643.png",
-  "https://cdn-icons-png.flaticon.com/512/6443/6443664.png",
-  "https://cdn-icons-png.flaticon.com/512/6443/6443634.png",
-  "https://cdn-icons-png.flaticon.com/512/6443/6443628.png",
-  "https://cdn-icons-png.flaticon.com/512/6443/6443625.png"
-]
+const stickerOptions = {
+  nature: [
+    "https://cdn-icons-png.flaticon.com/512/6443/6443652.png",
+    "https://cdn-icons-png.flaticon.com/512/6443/6443643.png",
+    "https://cdn-icons-png.flaticon.com/512/6443/6443664.png",
+    "https://cdn-icons-png.flaticon.com/512/6443/6443634.png",
+    "https://cdn-icons-png.flaticon.com/512/6443/6443628.png",
+    "https://cdn-icons-png.flaticon.com/512/6443/6443625.png"
+  ],
+  cats: [
+    "https://cdn-icons-png.flaticon.com/512/11565/11565172.png",
+    "https://cdn-icons-png.flaticon.com/512/11565/11565136.png",
+    "https://cdn-icons-png.flaticon.com/512/11565/11565160.png",
+    "https://cdn-icons-png.flaticon.com/512/11565/11565180.png",
+    "https://cdn-icons-png.flaticon.com/512/11565/11565138.png",
+    "https://cdn-icons-png.flaticon.com/512/11565/11565146.png"
+  ]
+}
 
 export function Stickers() {
   const { state, resetCountdown } = useCountdown();
+  const { theme } = useTheme();
 
   function getStickers() {
     const storedStickers = localStorage.getItem("stickers")
@@ -40,8 +52,7 @@ export function Stickers() {
   }
 
   function getStickerOption() {
-    let i = Math.floor(Math.random() * stickerOptions.length);
-    return stickerOptions[i];
+    return Math.floor(Math.random() * stickerOptions[theme()].length);
   }
 
   const [stickers, setStickers] = createStore(getStickers());
@@ -59,7 +70,7 @@ export function Stickers() {
   };
 
   return (
-    <section className={styles.Stickers}>
+    <section className={styles.Stickers} data-theme={theme()}>
       <ul>
         <Index each={stickers}>
           {(sticker, index) => {
@@ -72,7 +83,7 @@ export function Stickers() {
                 >
                   {index + 1}
                   <Show when={sticker().sticker}>
-                    <img src={sticker().sticker} />
+                    <img src={stickerOptions[theme()][sticker().sticker]} />
                   </Show>
                 </button>
               </li>

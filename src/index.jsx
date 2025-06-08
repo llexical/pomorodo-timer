@@ -4,6 +4,7 @@ import { render } from 'solid-js/web';
 import './index.css';
 import { App } from './App';
 import { CountdownProvider } from './context/Countdown';
+import { ThemeProvider } from './context/Theme';
 
 const root = document.getElementById('root');
 
@@ -14,7 +15,9 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
 }
 
 render(() => (
-  <CountdownProvider>
-    <App />
-  </CountdownProvider>
+  <ThemeProvider>
+    <CountdownProvider>
+      <App />
+    </CountdownProvider>
+  </ThemeProvider>
 ), root);

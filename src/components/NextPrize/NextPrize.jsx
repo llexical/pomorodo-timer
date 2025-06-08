@@ -1,15 +1,30 @@
 import { createSignal } from "solid-js";
 
 import { useCountdown } from "../../context/Countdown";
+import { useTheme } from "../../context/Theme";
+
 import styles from './NextPrize.module.css'
 
-const imgPrizeUrl = "https://cdn-icons-png.flaticon.com/512/9470/9470902.png";
-const imgPrizeUrlCompleted =
-  "https://cdn-icons-png.flaticon.com/512/11191/11191732.png";
+const prizeImgs = {
+  nature: {
+    default: "https://cdn-icons-png.flaticon.com/512/9470/9470902.png",
+    complete: "https://cdn-icons-png.flaticon.com/512/11191/11191732.png"
+  },
+  cats: {
+    default: "https://cdn-icons-png.flaticon.com/512/14895/14895948.png",
+    complete: "https://cdn-icons-png.flaticon.com/512/14985/14985014.png"
+  }
+}
 
 export function NextPrize() {
   const { state } = useCountdown();
+  const { theme } = useTheme();
+
   const [nextPrize, setNextPrize] = createSignal(getNextPrize());
+
+  const getPrizeImg = () => {
+    return state() === "completed" ? prizeImgs[theme()].complete : prizeImgs[theme()].default
+  }
 
   function getNextPrize() {
     const storedPrize = localStorage.getItem("nextPrize")
@@ -24,11 +39,16 @@ export function NextPrize() {
   return (
     <section className={styles.NextPrize}>
       <img
-        src={state() === "completed" ? imgPrizeUrlCompleted : imgPrizeUrl}
+        src={getPrizeImg()}
       />
       <div className={styles['NextPrize-setPrize']}>
         <h2>Next prize</h2>
-        <textarea name="prize-text" value={nextPrize()} placeholder="Something awesome here!" onFocusOut={(e) => updateNextPrize(e.target.value)}/>
+        <textarea
+          name="prize-text"
+          value={nextPrize()}
+          placeholder="Something awesome here!"
+          onFocusOut={(e) => updateNextPrize(e.target.value)}
+        />
       </div>
     </section>
   );
