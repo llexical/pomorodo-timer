@@ -1,7 +1,7 @@
 .Stickers {
   padding: var(--space-lg);
   background-color: var(--color-one);
-  margin-top: var(--space-lg);
+  margin-top: var(--space-md);
   border-radius: var(--curve-md);
 
   > ul {

@@ -6,6 +6,7 @@
   color: var(--timer-color);
   padding: var(--space-lg);
   border-radius: var(--curve-md);
+  margin-top: var(--space-xxl);
 
   > button {
     background-color: var(--timer-color);

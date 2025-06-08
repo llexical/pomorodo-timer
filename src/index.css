@@ -1,16 +1,16 @@
 :root {
-  --color-one: #8cd790;
-  --color-two: #00e8fc;
-  --color-three: #f96e46;
-  --color-four: #426a5a;
-  --color-five: #ffe3e3;
-  --color-black: #000;
-  --color-white: #fff;
+  --color-one:rgb(226, 225, 162);
+  --color-two:rgb(141, 199, 140);
+  --color-three: rgb(97, 139, 123);
+  --color-four: rgb(58, 118, 92);
+  --color-five:rgb(204, 215, 156);
+  --color-black: #182711;
+  --color-white:rgb(229, 228, 215);
 
   --state-inactive-color: var(--color-three);
   --state-active-color: var(--color-four);
   --state-paused-color: var(--color-three);
-  --state-completed-color: var(--color-one);
+  --state-completed-color: var(--color-two);
 
   --space-xs: 4px;
   --space-sm: 8px;
@@ -42,6 +42,10 @@
 body {
   font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
+  background-color: var(--color-white);
+  background-image: url("https://images.unsplash.com/photo-1506260408121-e353d10b87c7?q=80&w=2128&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-position: center;
+   background-repeat: no-repeat
 }
 
 h1 {
