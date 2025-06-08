@@ -1,6 +1,6 @@
 .Timer {
   --timer-background: var(--state-color);
-  --timer-color: var(--color-white);
+  --timer-color: var(--color-font-one);
 
   background-color: var(--timer-background);
   color: var(--timer-color);

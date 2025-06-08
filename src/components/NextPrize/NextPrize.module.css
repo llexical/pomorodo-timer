@@ -8,10 +8,14 @@
   padding: var(--space-md);
   background-color: var(--color-five);
   border-radius: var(--curve-md);
-  color: var(--color-three);
+  color: var(--color-font-two);
 
   > img {
     max-width: 100%;
+  }
+
+  &[data-theme="minimalist"] {
+    grid-template-columns: 1fr;
   }
 }
 

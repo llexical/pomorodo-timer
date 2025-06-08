@@ -5,11 +5,11 @@ const ThemeContext = createContext();
 const themes = [
   "nature",
   "cats",
-  "zen"
+  "minimalist"
 ]
 
 export function ThemeProvider(props) {
-  const [theme, setTheme] = createSignal(themes[1]);
+  const [theme, setTheme] = createSignal(themes[2]);
 
   const themeVals = {
     theme,

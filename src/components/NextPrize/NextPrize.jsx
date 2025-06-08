@@ -13,6 +13,10 @@ const prizeImgs = {
   cats: {
     default: "https://cdn-icons-png.flaticon.com/512/14895/14895948.png",
     complete: "https://cdn-icons-png.flaticon.com/512/14985/14985014.png"
+  },
+  minimalist: {
+    default: "",
+    complete: ""
   }
 }
 
@@ -37,7 +41,7 @@ export function NextPrize() {
   }
 
   return (
-    <section className={styles.NextPrize}>
+    <section className={styles.NextPrize} data-theme={theme()}>
       <img
         src={getPrizeImg()}
       />

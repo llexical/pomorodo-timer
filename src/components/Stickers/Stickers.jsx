@@ -21,7 +21,8 @@ const stickerOptions = {
     "https://cdn-icons-png.flaticon.com/512/11565/11565180.png",
     "https://cdn-icons-png.flaticon.com/512/11565/11565138.png",
     "https://cdn-icons-png.flaticon.com/512/11565/11565146.png"
-  ]
+  ],
+  minimalist: ["", "", "", "", "", ""]
 }
 
 export function Stickers() {
@@ -76,13 +77,13 @@ export function Stickers() {
           {(sticker, index) => {
             const isNextSticker = () => index === nextStickerIndex();
             return (
-              <li data-next-sticker={isNextSticker()} data-is-completed={sticker.completed}>
+              <li data-next-sticker={isNextSticker()} data-is-completed={sticker().completed}>
                 <button
                   disabled={!isNextSticker() || state() !== "completed"}
                   onClick={() => onCollectSticker()}
                 >
                   {index + 1}
-                  <Show when={sticker().sticker}>
+                  <Show when={sticker().sticker !== null}>
                     <img src={stickerOptions[theme()][sticker().sticker]} />
                   </Show>
                 </button>

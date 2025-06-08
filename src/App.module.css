@@ -15,29 +15,59 @@
   --theme-cats-color-black: #182711;
   --theme-cats-color-white:rgb(235, 225, 234);
 
+  --theme-minimalist-color-one: rgb(251, 194, 181);
+  --theme-minimalist-color-two:rgb(255, 168, 169);
+  --theme-minimalist-color-three: rgb(247, 134, 170);
+  --theme-minimalist-color-four: rgb(161, 74, 118);
+  --theme-minimalist-color-five: rgb(97, 97, 233);
+  --theme-minimalist-color-black: #212121;
+  --theme-minimalist-color-white: #FAF9F6;
+
   &[data-theme="nature"] {
+    --color-white: var(--theme-nature-color-white);
+    --color-black: var(--theme-nature-color-black);
+
     --color-one: var(--theme-nature-color-one);
     --color-two: var(--theme-nature-color-two);
     --color-three: var(--theme-nature-color-three);
     --color-four: var(--theme-nature-color-four);
     --color-five: var(--theme-nature-color-five);
-    --color-white: var(--theme-nature-color-white);
-    --color-black: var(--theme-nature-color-black);
+
+    --color-font-one: var(--color-white);
+    --color-font-two: var(--color-three);
 
     background-image: url("https://images.unsplash.com/photo-1506260408121-e353d10b87c7?q=80&w=2128&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-repeat: no-repeat;
   }
 
   &[data-theme="cats"] {
+    --color-white: var(--theme-cats-color-white);
+    --color-black: var(--theme-cats-color-black);
+
     --color-one: var(--theme-cats-color-one);
     --color-two: var(--theme-cats-color-two);
     --color-three: var(--theme-cats-color-three);
     --color-four: var(--theme-cats-color-four);
     --color-five: var(--theme-cats-color-five);
-    --color-white: var(--theme-cats-color-white);
-    --color-black: var(--theme-cats-color-black);
+
+    --color-font-one: var(--color-white);
+    --color-font-two: var(--color-three);
 
     background-image: url("https://img.freepik.com/free-photo/digital-art-cat-pattern_23-2151520532.jpg");
+  }
+
+  &[data-theme="minimalist"] {
+    --color-white: var(--theme-minimalist-color-white);
+    --color-black: var(--theme-minimalist-color-black);
+
+    --color-one: var(--color-white);
+    --color-two: var(--color-white);
+    --color-three: var(--color-white);
+    --color-four: var(--color-white);
+    --color-five: var(--color-white);
+
+    --color-font-one: var(--color-black);
+    --color-font-two: var(--color-black);
   }
 
   --state-inactive-color: var(--color-three);

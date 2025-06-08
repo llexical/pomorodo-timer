@@ -16,23 +16,23 @@
   > ul > li {
     list-style: none;
     height: 70px;
-    border: 5px solid var(--color-three);
+    border: 5px solid var(--color-font-two);
     border-radius: 40px;
     line-height: 60px;
     font-weight: var(--font-weight-super);
     font-size: var(--font-lg);
-    color: var(--color-three);
+    color: var(--color-font-two);
     position: relative;
   }
 
   > ul > li[data-next-sticker="true"] {
     background-color: var(--state-color);
-    border-color: var(--color-white);
-    color: var(--color-white);
+    border-color: var(--color-font-one);
+    color: var(--color-font-one);
   }
 
   > ul > li[data-is-completed="true"] {
-    border-color: var(--color-white);
+    border-color: var(--color-font-one);
     color: var(--color-one);
   }
 
