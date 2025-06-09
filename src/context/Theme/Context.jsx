@@ -9,11 +9,27 @@ const themes = [
 ]
 
 export function ThemeProvider(props) {
-  const [theme, setTheme] = createSignal(themes[2]);
+  const getTheme = () => {
+    const storedTheme = localStorage.getItem("theme")
+    if (storedTheme) {
+      return storedTheme;
+    }
+    return themes[0];
+  }
+
+  const [theme, setTheme] = createSignal(getTheme());
+
+  const updateTheme = (theme) => {
+    setTheme(theme);
+    localStorage.setItem("theme", theme);
+  }
+
+
 
   const themeVals = {
     theme,
-    setTheme
+    themes,
+    updateTheme,
   }
 
   return (

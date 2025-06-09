@@ -9,7 +9,7 @@ export function CountdownProvider(props) {
   let curCountdown;
   let curAudioTimeout;
   const audio = new Audio(audioURL);
-  const startTime = new Temporal.PlainTime(0, 0, 3);
+  const startTime = new Temporal.PlainTime(0, 20, 0);
   const oneSecondDuration = Temporal.Duration.from("PT1S"); // One-second duration
 
   const [state, setState] = createSignal("inactive");

@@ -15,13 +15,14 @@
   --theme-cats-color-black: #182711;
   --theme-cats-color-white:rgb(235, 225, 234);
 
-  --theme-minimalist-color-one: rgb(251, 194, 181);
-  --theme-minimalist-color-two:rgb(255, 168, 169);
-  --theme-minimalist-color-three: rgb(247, 134, 170);
-  --theme-minimalist-color-four: rgb(161, 74, 118);
-  --theme-minimalist-color-five: rgb(97, 97, 233);
   --theme-minimalist-color-black: #212121;
   --theme-minimalist-color-white: #FAF9F6;
+  --theme-minimalist-color-one: var(--theme-minimalist-color-white);
+  --theme-minimalist-color-two: var(--theme-minimalist-color-white);
+  --theme-minimalist-color-three: var(--theme-minimalist-color-white);
+  --theme-minimalist-color-four: var(--theme-minimalist-color-white);
+  --theme-minimalist-color-five: var(--theme-minimalist-color-white);
+
 
   &[data-theme="nature"] {
     --color-white: var(--theme-nature-color-white);
@@ -60,11 +61,11 @@
     --color-white: var(--theme-minimalist-color-white);
     --color-black: var(--theme-minimalist-color-black);
 
-    --color-one: var(--color-white);
-    --color-two: var(--color-white);
-    --color-three: var(--color-white);
-    --color-four: var(--color-white);
-    --color-five: var(--color-white);
+    --color-one: var(--theme-minimalist-color-one);
+    --color-two: var(--theme-minimalist-color-two);
+    --color-three: var(--theme-minimalist-color-three);
+    --color-four: var(--theme-minimalist-color-four);
+    --color-five: var(--theme-minimalist-color-five);
 
     --color-font-one: var(--color-black);
     --color-font-two: var(--color-black);
