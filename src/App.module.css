@@ -23,6 +23,14 @@
   --theme-minimalist-color-four: var(--theme-minimalist-color-white);
   --theme-minimalist-color-five: var(--theme-minimalist-color-white);
 
+  --theme-sherlock-color-one: #C2B280;
+  --theme-sherlock-color-two:#D4AF37;
+  --theme-sherlock-color-three: #bb8D6b;
+  --theme-sherlock-color-four: #A4443D;
+  --theme-sherlock-color-five: #52796f;
+  --theme-sherlock-color-black: #2D2A2E;
+  --theme-sherlock-color-white: #FAEBD7;
+
 
   &[data-theme="nature"] {
     --color-white: var(--theme-nature-color-white);
@@ -36,6 +44,7 @@
 
     --color-font-one: var(--color-white);
     --color-font-two: var(--color-three);
+    --color-label: var(--color-three);
 
     /* Pretty lupins, an option to switch to ahah */
     /* background-image: url("https://images.unsplash.com/photo-1526276953854-70bbe4ca1405?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); */
@@ -56,6 +65,7 @@
 
     --color-font-one: var(--color-white);
     --color-font-two: var(--color-three);
+    --color-label: var(--color-three);
 
     background-image: url("https://img.freepik.com/free-photo/digital-art-cat-pattern_23-2151520532.jpg");
   }
@@ -72,6 +82,26 @@
 
     --color-font-one: var(--color-black);
     --color-font-two: var(--color-black);
+    --color-label: var(--color-white);
+  }
+
+  &[data-theme="sherlock"] {
+    --color-white: var(--theme-sherlock-color-white);
+    --color-black: var(--theme-sherlock-color-black);
+
+    --color-one: var(--theme-sherlock-color-one);
+    --color-two: var(--theme-sherlock-color-two);
+    --color-three: var(--theme-sherlock-color-three);
+    --color-four: var(--theme-sherlock-color-four);
+    --color-five: var(--theme-sherlock-color-five);
+
+    --color-font-one: var(--color-white);
+    --color-font-two: var(--color-white);
+    --color-label: var(--color-three);
+
+    background-image: url("https://images.unsplash.com/photo-1700403330622-f1bee3416f2e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   --state-inactive-color: var(--color-three);

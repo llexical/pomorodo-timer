@@ -5,7 +5,8 @@ const ThemeContext = createContext();
 const themes = [
   "nature",
   "cats",
-  "minimalist"
+  "minimalist",
+  "sherlock"
 ]
 
 export function ThemeProvider(props) {

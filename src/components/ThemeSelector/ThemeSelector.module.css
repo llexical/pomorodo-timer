@@ -34,5 +34,10 @@
       background-color: var(--theme-minimalist-color-white);
       color: var(--theme-minimalist-color-white);
     }
+
+    &[data-theme-choice="sherlock"] {
+      background-color: var(--theme-sherlock-color-three);
+      color: var(--theme-sherlock-color-three);
+    }
   }
 }

@@ -46,6 +46,13 @@
   }
 
   img {
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+  }
+
+  &[data-theme="nature"] img {
     width: 150%;
     position: absolute;
     left: -25%;

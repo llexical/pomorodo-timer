@@ -22,7 +22,15 @@ const stickerOptions = {
     "https://cdn-icons-png.flaticon.com/512/11565/11565138.png",
     "https://cdn-icons-png.flaticon.com/512/11565/11565146.png"
   ],
-  minimalist: ["", "", "", "", "", ""]
+  minimalist: ["", "", "", "", "", ""],
+  sherlock: [
+    "https://cdn-icons-png.flaticon.com/512/1283/1283487.png",
+    "https://cdn-icons-png.flaticon.com/512/2539/2539419.png",
+    "https://cdn-icons-png.flaticon.com/512/3013/3013756.png",
+    "https://cdn-icons-png.flaticon.com/512/311/311762.png",
+    "https://cdn-icons-png.flaticon.com/512/836/836853.png",
+    "https://cdn-icons-png.flaticon.com/512/3286/3286624.png"
+  ]
 }
 
 export function Stickers() {

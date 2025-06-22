@@ -25,6 +25,7 @@
 
   > h2 {
     background-color: var(--color-white);
+    color: var(--color-label);
     display: inline-block;
     padding: var(--space-xs);
     border-radius: var(--curve-sm);

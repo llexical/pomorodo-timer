@@ -17,6 +17,10 @@ const prizeImgs = {
   minimalist: {
     default: "",
     complete: ""
+  },
+  sherlock: {
+    default: "https://cdn-icons-png.flaticon.com/512/10641/10641473.png",
+    complete: "https://cdn-icons-png.flaticon.com/512/332/332057.png"
   }
 }
 
