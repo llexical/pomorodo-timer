@@ -30,7 +30,15 @@ const stickerOptions = {
     "https://cdn-icons-png.flaticon.com/512/311/311762.png",
     "https://cdn-icons-png.flaticon.com/512/836/836853.png",
     "https://cdn-icons-png.flaticon.com/512/3286/3286624.png"
-  ]
+  ],
+  hubblehq: [
+    "https://cdn-icons-png.flaticon.com/512/2532/2532464.png",
+    "https://cdn-icons-png.flaticon.com/512/3474/3474353.png",
+    "https://cdn-icons-png.flaticon.com/512/16423/16423466.png",
+    "https://cdn-icons-png.flaticon.com/512/6670/6670505.png",
+    "https://cdn-icons-png.flaticon.com/512/1257/1257718.png",
+    "https://cdn-icons-png.flaticon.com/512/887/887707.png"
+  ],
 }
 
 export function Stickers() {

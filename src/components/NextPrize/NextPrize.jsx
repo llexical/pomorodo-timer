@@ -21,7 +21,11 @@ const prizeImgs = {
   sherlock: {
     default: "https://cdn-icons-png.flaticon.com/512/10641/10641473.png",
     complete: "https://cdn-icons-png.flaticon.com/512/332/332057.png"
-  }
+  },
+  hubblehq: {
+    default: "https://cdn-icons-png.flaticon.com/512/10729/10729384.png",
+    complete: "https://cdn-icons-png.flaticon.com/512/2086/2086684.png"
+  },
 }
 
 export function NextPrize() {

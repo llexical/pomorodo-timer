@@ -31,6 +31,14 @@
   --theme-sherlock-color-black: #2D2A2E;
   --theme-sherlock-color-white: #FAEBD7;
 
+  --theme-hubblehq-color-one: #a4fdff;
+  --theme-hubblehq-color-two: rgb(232, 17, 104);
+  --theme-hubblehq-color-three: rgb(232, 17, 104);
+  --theme-hubblehq-color-four: rgb(232, 17, 104);
+  --theme-hubblehq-color-five: #FFF;
+  --theme-hubblehq-color-black: rgb(5, 10, 58);
+  --theme-hubblehq-color-white: #FFF;
+
 
   &[data-theme="nature"] {
     --color-white: var(--theme-nature-color-white);
@@ -100,6 +108,25 @@
     --color-label: var(--color-three);
 
     background-image: url("https://images.unsplash.com/photo-1700403330622-f1bee3416f2e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &[data-theme="hubblehq"] {
+    --color-white: var(--theme-hubblehq-color-white);
+    --color-black: var(--theme-hubblehq-color-black);
+
+    --color-one: var(--theme-hubblehq-color-one);
+    --color-two: var(--theme-hubblehq-color-two);
+    --color-three: var(--theme-hubblehq-color-three);
+    --color-four: var(--theme-hubblehq-color-four);
+    --color-five: var(--theme-hubblehq-color-five);
+
+    --color-font-one: var(--color-white);
+    --color-font-two: var(--color-three);
+    --color-label: var(--color-three);
+
+    background-image: url("https://hubble.imgix.net/listings/uploads/spaces/8421/1618482778784-af_missionworks-132.jpg?auto=format%2Ccompress&dpr=2&q=30&w=1200");
     background-repeat: no-repeat;
     background-size: cover;
   }

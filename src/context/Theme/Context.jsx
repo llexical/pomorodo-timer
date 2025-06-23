@@ -6,7 +6,8 @@ const themes = [
   "nature",
   "cats",
   "minimalist",
-  "sherlock"
+  "sherlock",
+  "hubblehq"
 ]
 
 export function ThemeProvider(props) {

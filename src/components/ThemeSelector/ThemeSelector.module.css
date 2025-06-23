@@ -39,5 +39,10 @@
       background-color: var(--theme-sherlock-color-three);
       color: var(--theme-sherlock-color-three);
     }
+
+    &[data-theme-choice="hubblehq"] {
+      background-color: var(--theme-hubblehq-color-three);
+      color: var(--theme-hubblehq-color-three);
+    }
   }
 }
